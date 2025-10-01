@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexin AntiCheat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(180deg, black, #001133);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cccccc;
+    }
+
+    section {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 400px;
+      box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Glossy effect */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0)
+      );
+      transform: rotate(25deg);
+      animation: shine 4s infinite linear;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(25deg); }
+      100% { transform: translateX(100%) rotate(25deg); }
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 35px rgba(0, 255, 0, 0.6);
+    }
+
+    .price {
+      font-size: 2rem;
+      color: limegreen;
+      margin-bottom: 20px;
+    }
+
+    .feature {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .feature.green {
+      color: limegreen;
+    }
+
+    .feature.red {
+      color: #990000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nexin AntiCheat</h1>
+    <p>The Worlds Best Anticheat</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <div class="price">$3.99 / month</div>
+      <div class="feature green">Flight Detection</div>
+      <div class="feature green">Speed Detection</div>
+      <div class="feature green">Patches Once Found</div>
+      <div class="feature green">AntiDupe Detections</div>
+      <div class="feature red">No Alt Detections</div>
+    </div>
+  </section>
+</body>
+</html>
